@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Match Challenge - Stroop Effect Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Game Container -->
+    <div class="game-container">
+        <!-- Header Section -->
+        <header class="game-header">
+            <h1>Color Match Challenge</h1>
+            <p class="instructions">Click the color that matches the <strong>font color</strong>, not the word!</p>
+        </header>
+
+        <!-- Score Section -->
+        <div class="score-section">
+            <div class="score-display">
+                <span class="score-label">Score:</span>
+                <span id="current-score" class="score-value">0</span>
+            </div>
+            <div class="score-display">
+                <span class="score-label">High Score:</span>
+                <span id="high-score" class="score-value">0</span>
+            </div>
+        </div>
+
+        <!-- Game Area -->
+        <div class="game-area" id="game-area">
+            <!-- Timer Bar -->
+            <div class="timer-container">
+                <div class="timer-bar" id="timer-bar"></div>
+            </div>
+
+            <!-- Color Word Display -->
+            <div class="word-display">
+                <span id="color-word" class="color-text">READY?</span>
+            </div>
+
+            <!-- Color Buttons -->
+            <div class="color-buttons">
+                <button class="color-btn red-btn" data-color="red" id="red-btn">
+                    <span class="btn-label">RED</span>
+                </button>
+                <button class="color-btn blue-btn" data-color="blue" id="blue-btn">
+                    <span class="btn-label">BLUE</span>
+                </button>
+                <button class="color-btn green-btn" data-color="green" id="green-btn">
+                    <span class="btn-label">GREEN</span>
+                </button>
+                <button class="color-btn yellow-btn" data-color="yellow" id="yellow-btn">
+                    <span class="btn-label">YELLOW</span>
+                </button>
+            </div>
+
+            <!-- Start/Restart Button -->
+            <button id="start-btn" class="start-btn">Start Game</button>
+            
+            <!-- Exit Game Button (shown only during gameplay) -->
+            <button id="exit-btn" class="exit-btn" style="display: none;">Exit Game</button>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div class="game-over" id="game-over" style="display: none;">
+            <div class="game-over-content">
+                <h2>Game Over!</h2>
+                <p class="final-score">Final Score: <span id="final-score">0</span></p>
+                <p class="high-score-message" id="high-score-message" style="display: none;">
+                    🎉 New High Score! 🎉
+                </p>
+                <div class="game-over-buttons">
+                    <button id="restart-btn" class="restart-btn">Play Again</button>
+                    <button id="menu-btn" class="menu-btn">Main Menu</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Messages -->
+        <div class="feedback" id="feedback"></div>
+    </div>
+
+    <!-- Audio Elements for Sound Effects -->
+    <audio id="correct-sound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEbBjiS1fPOeSsFJHfJ8N+NQAoUX7Pp7alVFApGnt/zv2EbBjaQ2PLPeikEJXfH8+CPQgkUXbPq7axWFApFnt8=" type="audio/wav">
+    </audio>
+    <audio id="wrong-sound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRr4CAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YZoCAAC4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4QEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4QEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBA" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

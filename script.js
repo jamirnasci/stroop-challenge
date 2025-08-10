@@ -12,7 +12,7 @@ class ColorMatchGame {
         this.gameTimer = null;
         this.currentTimeLimit = 3000; // Start with 3 seconds
         this.minTimeLimit = 800; // Minimum time limit (0.8 seconds)
-        this.timeDecrement = 100; // Decrease time by 100ms each round
+        this.timeDecrement = 500; // Decrease time by 100ms each round
         
         // Available colors for the game
         this.colors = ['red', 'blue', 'green', 'yellow'];

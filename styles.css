@@ -119,6 +119,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 .color-btn {
@@ -132,6 +133,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .color-btn:hover {
@@ -344,11 +346,7 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .game-container {
-        padding: 20px;
-        margin: 10px;
-    }
-    
+  
     .game-header h1 {
         font-size: 2rem;
     }
@@ -361,29 +359,12 @@ body {
         font-size: 2.5rem;
     }
     
-    .color-buttons {
-        gap: 10px;
-    }
-    
-    .color-btn {
-        padding: 15px;
-        font-size: 1rem;
-    }
-    
     .score-section {
-        flex-direction: column;
         gap: 10px;
     }
 }
 
 @media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-    
-    .game-container {
-        padding: 15px;
-    }
     
     .game-header h1 {
         font-size: 1.8rem;
@@ -393,14 +374,6 @@ body {
         font-size: 2rem;
     }
     
-    .color-buttons {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-    
-    .color-btn {
-        padding: 20px;
-    }
     
     .game-over-buttons {
         flex-direction: column;
